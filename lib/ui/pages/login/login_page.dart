@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 import 'package:unitask/app/extensions/sized_box_extension.dart';
+import 'package:unitask/app/extensions/snackbar_extension.dart';
+import 'package:unitask/app/router/app_page.dart';
 import 'package:unitask/ui/common/label_text_field.dart';
 import 'package:unitask/ui/common/text_divider.dart';
 
@@ -21,10 +24,7 @@ class _LoginPageState extends State<LoginPage> {
           child: Column(
             mainAxisSize: .min,
             children: [
-              Icon(
-                LucideIcons.graduationCap,
-                size : 50,
-              ),
+              Icon(LucideIcons.graduationCap, size: 50),
               Text(
                 'UniTask',
                 style: const TextStyle(
@@ -32,18 +32,13 @@ class _LoginPageState extends State<LoginPage> {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              Text(
-                '과제 관리를 스마트하게',
-                style: const TextStyle(
-                  color: Colors.grey
-                ),
-              ),
+              Text('과제 관리를 스마트하게', style: const TextStyle(color: Colors.grey)),
               50.heightBox,
 
               LabelTextField(
                 label: '이메일',
                 hintText: 'example@university.edu',
-                icon: LucideIcons.mail
+                icon: LucideIcons.mail,
               ),
 
               20.heightBox,
@@ -51,18 +46,20 @@ class _LoginPageState extends State<LoginPage> {
               LabelTextField(
                 label: '비밀번호',
                 hintText: '000000',
-                icon: LucideIcons.lockKeyhole
+                icon: LucideIcons.lockKeyhole,
+                enableObscure: true,
               ),
               // 비밀번호 잊음
               Align(
                 alignment: .centerRight,
                 child: TextButton(
-                  onPressed: (){},
-                  child: Text(
-                  '비밀번호를 잊으셨나요?',
-                )),
+                  onPressed: () {
+                    context.showSnackbar('곧 기능을 출시합니다!');
+                  },
+                  child: Text('비밀번호를 잊으셨나요?'),
+                ),
               ),
-              
+
               20.heightBox,
 
               // 로그인 버튼
@@ -72,13 +69,11 @@ class _LoginPageState extends State<LoginPage> {
                   onPressed: () {},
                   child: Text(
                     '로그인',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: .bold
-                    )
-                  )),
+                    style: TextStyle(fontSize: 20, fontWeight: .bold),
+                  ),
+                ),
               ),
- 
+
               20.heightBox,
 
               TextDivider(text: '또는'),
@@ -90,16 +85,16 @@ class _LoginPageState extends State<LoginPage> {
                 children: [
                   Text(
                     '계정이 없으신가요?',
-                    style: const TextStyle(
-                      color: Colors.grey
-                    ),
+                    style: const TextStyle(color: Colors.grey),
                   ),
                   TextButton(
-                    onPressed: (){},
+                    onPressed: () {
+                      context.pushNamed(AppPage.signup.name);
+                    },
                     child: Text('회원가입'),
                   ),
                 ],
-              )
+              ),
             ],
           ),
         ),

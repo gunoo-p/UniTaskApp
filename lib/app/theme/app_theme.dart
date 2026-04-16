@@ -7,6 +7,10 @@ class AppTheme {
     brightness: .light,
     visualDensity: .adaptivePlatformDensity,
     scaffoldBackgroundColor: Colors.white,
+    appBarTheme: AppBarTheme(
+      backgroundColor: Colors.white,
+      foregroundColor: Colors.black,
+    ),
     floatingActionButtonTheme: FloatingActionButtonThemeData(
       backgroundColor: Color(0xFF3B82F6), // 배경 색상
       foregroundColor: Colors.white, // 아이콘 색상
@@ -44,6 +48,10 @@ class AppTheme {
     brightness: .dark,
     visualDensity: .adaptivePlatformDensity,
     scaffoldBackgroundColor: Colors.black,
+    appBarTheme: AppBarTheme(
+      backgroundColor: Colors.black,
+      foregroundColor: Colors.white,
+    ),
     floatingActionButtonTheme: FloatingActionButtonThemeData(
       backgroundColor: Color(0xFF3B82F6), // 배경 색상
       foregroundColor: Colors.white, // 아이콘 색상

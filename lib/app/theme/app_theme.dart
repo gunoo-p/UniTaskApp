@@ -10,6 +10,11 @@ class AppTheme {
     appBarTheme: AppBarTheme(
       backgroundColor: Colors.white,
       foregroundColor: Colors.black,
+      titleTextStyle: TextStyle(
+        fontWeight: .bold,
+        color: Colors.black,
+        fontSize: 24,
+      ),
     ),
     floatingActionButtonTheme: FloatingActionButtonThemeData(
       backgroundColor: Color(0xFF3B82F6), // 배경 색상

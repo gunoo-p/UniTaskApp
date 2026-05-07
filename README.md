@@ -16,3 +16,7 @@
 ## 9주차
 * api, lib/app/services 폴더 생성
 * API 연결 후 회원가입
+
+## 10주차
+* Login API 연결 및 로그인 기능 구현
+* home_page 생성 및 AppBar 추가

@@ -16,6 +16,9 @@ class UniTaskApp extends StatelessWidget {
       theme: AppTheme.light,
       darkTheme: AppTheme.dark,
       routerConfig: appRouter,
+      debugShowCheckedModeBanner: true, // 디버그 배너 제거 true하면 다시 생김
+      // 화면에 성능 오버레이 표시 (프레임 렌더링 시간, GPU 사용량 등)
+      // showPerformanceOverlay: true,
     );
   }
 }

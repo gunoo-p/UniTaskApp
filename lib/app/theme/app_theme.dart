@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
+///
+/// 앱 테마
+/// - LIGHT
+/// - DARK
 class AppTheme {
-  static ThemeData get light => ThemeData.light(
-    useMaterial3: true,
-  ).copyWith(
+  static ThemeData get light => ThemeData.light(useMaterial3: true).copyWith(
     brightness: .light,
     visualDensity: .adaptivePlatformDensity,
     scaffoldBackgroundColor: Colors.white,
-    appBarTheme: AppBarTheme(
+    appBarTheme: const AppBarTheme(
       backgroundColor: Colors.white,
       foregroundColor: Colors.black,
       titleTextStyle: TextStyle(
@@ -16,75 +18,68 @@ class AppTheme {
         fontSize: 24,
       ),
     ),
-    floatingActionButtonTheme: FloatingActionButtonThemeData(
-      backgroundColor: Color(0xFF3B82F6), // 배경 색상
-      foregroundColor: Colors.white, // 아이콘 색상
+    floatingActionButtonTheme: const FloatingActionButtonThemeData(
+      foregroundColor: Colors.white,
+      backgroundColor: Color(0xFF3B82F6),
     ),
     textButtonTheme: TextButtonThemeData(
-      style: TextButton.styleFrom(
-        foregroundColor: Color(0xFF3B82F6) // 텍스트 색상
-      ),
+      style: TextButton.styleFrom(foregroundColor: const Color(0xFF3B82F6)),
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        foregroundColor: Colors.white, // 텍스트 색상
-        backgroundColor: Color(0xFF3B82F6),
-        padding: .symmetric(vertical: 20),
-        shape: RoundedRectangleBorder(
-          borderRadius: .circular(14),
-        ),
+        foregroundColor: Colors.white,
+        backgroundColor: const Color(0xFF3B82F6),
+        padding: const .symmetric(vertical: 20),
+        shape: RoundedRectangleBorder(borderRadius: .circular(12)),
       ),
     ),
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
-      fillColor: Color(0xFFF9FAFB),
-      prefixIconColor: Color(0xFF9CA3AF),
-      hintStyle: TextStyle(
-        color: Color(0xFF9CA3AF),
-      ),
+      fillColor: const Color(0xFFF9FAFB),
+      prefixIconColor: const Color(0xFF9CA3AF),
+      hintStyle: const TextStyle(color: Color(0xFF9CA3AF)),
       border: OutlineInputBorder(
         borderRadius: .circular(12),
-        borderSide: .none,
+        borderSide: BorderSide.none,
       ),
-    )
+    ),
   );
 
   static ThemeData get dark => ThemeData.dark(useMaterial3: true).copyWith(
-    brightness: .dark,
-    visualDensity: .adaptivePlatformDensity,
-    scaffoldBackgroundColor: Colors.black,
-    appBarTheme: AppBarTheme(
-      backgroundColor: Colors.black,
+    brightness: Brightness.dark,
+    visualDensity: VisualDensity.adaptivePlatformDensity,
+    scaffoldBackgroundColor: const Color(0xFF111827),
+    appBarTheme: const AppBarTheme(
+      backgroundColor: Color(0xFF111827),
       foregroundColor: Colors.white,
+      titleTextStyle: TextStyle(
+        fontWeight: .bold,
+        color: Colors.white,
+        fontSize: 24,
+      ),
     ),
-    floatingActionButtonTheme: FloatingActionButtonThemeData(
-      backgroundColor: Color(0xFF3B82F6), // 배경 색상
-      foregroundColor: Colors.white, // 아이콘 색상
+    floatingActionButtonTheme: const FloatingActionButtonThemeData(
+      foregroundColor: Colors.white,
+      backgroundColor: Color(0xFF3B82F6),
     ),
     textButtonTheme: TextButtonThemeData(
-      style: TextButton.styleFrom(
-        foregroundColor: Color(0xFF3B82F6), // 텍스트 색상
-      ),
+      style: TextButton.styleFrom(foregroundColor: const Color(0xFF60A5FA)),
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        foregroundColor: Colors.white, // 텍스트 색상
-        backgroundColor: Color(0xFF3B82F6),
-        padding: .symmetric(vertical: 20),
-        shape: RoundedRectangleBorder(borderRadius: .circular(14)),
+        foregroundColor: Colors.white,
+        backgroundColor: const Color(0xFF3B82F6),
+        padding: const .symmetric(vertical: 20),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       ),
     ),
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
-      fillColor: Color(0xFFF9FAFB),
-      prefixIconColor: Color(0xFF9CA3AF),
-      hintStyle: TextStyle(color: Color(0xFF9CA3AF)),
+      fillColor: const Color(0xFF1F2937),
       border: OutlineInputBorder(
-        borderRadius: .circular(12),
-        borderSide: .none,
+        borderRadius: BorderRadius.circular(12),
+        borderSide: BorderSide.none,
       ),
     ),
   );
-
-
 }

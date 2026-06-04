@@ -9,7 +9,7 @@ Widget preview() {
     children: const [
       PriorityBadge(priority: Priority.low),
       SizedBox(width: 8),
-      PriorityBadge(priority: Priority.mid),
+      PriorityBadge(priority: Priority.medium),
       SizedBox(width: 8),
       PriorityBadge(priority: Priority.high),
     ],
